@@ -24,8 +24,6 @@ class Produk extends Controller
         $details['img']    = $baseImg.'otomotif/'.$data['product']['gambar'];
         $details['brosur'] = $baseImg.'otomotif/brosur/'.$data['product']['brosur'];
 
-        // dd($data);
-
         return view('detail',compact('data','index','baseImg','details'));
     }
 }
