@@ -18,7 +18,7 @@ class Beranda extends Controller
         $index = 'home';
         $baseImg = parent::$baseImg;
         $class = '';
-        dd($data);
+        
         return view('home',compact('data','index','baseImg','class'));
     }
 }
