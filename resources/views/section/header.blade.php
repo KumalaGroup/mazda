@@ -1,7 +1,7 @@
 <section id="topbar" class="d-none d-lg-block">
     <div class="container d-flex">
         <div class="contact-info mr-auto">
-            <i class="bx bx-car"></i><a href="#">Test Drive</a> |
+            <i class="bx bx-car"></i><a href="#" data-toggle="modal" data-target="#testdrive">Test Drive</a> |
             <i class="bx bx-support"></i> <a href="#">Booking Service</a>
         </div>
         <div class="social-links">

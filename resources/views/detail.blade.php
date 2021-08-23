@@ -135,6 +135,13 @@
           <div class="outer">
             <div id="big" class="owl-carousel owl-theme">
 
+                <div class="item">
+                  <img src="{{$details['img']}}" alt="" width="100%">
+                </div>
+              
+            </div>
+            <!-- <div id="thumbs" class="owl-carousel owl-theme">
+
               <div class="item">
                 <img src="{{asset('temp/assets/img/product-3.jpg')}}" alt="" width="100%">
               </div>
@@ -145,20 +152,7 @@
                 <img src="{{asset('temp/assets/img/portfolio/portfolio-details-3.jpg')}}" alt="" width="100%">
               </div>
 
-            </div>
-            <div id="thumbs" class="owl-carousel owl-theme">
-
-              <div class="item">
-                <img src="{{asset('temp/assets/img/product-3.jpg')}}" alt="" width="100%">
-              </div>
-              <div class="item">
-                <img src="{{asset('temp/assets/img/portfolio/portfolio-details-2.jpg')}}" alt="" width="100%">
-              </div>
-              <div class="item">
-                <img src="{{asset('temp/assets/img/portfolio/portfolio-details-3.jpg')}}" alt="" width="100%">
-              </div>
-
-            </div>
+            </div> -->
           </div>
         </div>
 
@@ -167,12 +161,12 @@
             <h3>Detail Product</h3>
             <hr>
             <ul>
-              <li><strong>Mazda CX-5</strong></li>
-              <li><strong>Rp. {{number_format('100000000')}}</strong></li>
+              <li><strong>{{$details['nama']}}</strong></li>
+              <li><strong>{{$details['harga']}}</strong></li>
             </ul>
             <div class="portfolio-description">
               <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+                {{$details['desc']}}
               </p>
 
             </div>
@@ -196,28 +190,28 @@
       <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
           <div class="icon"><i class="bx bx-support"></i></div>
-          <h4 class="title"><a href="">Hubungi Kami</a>&emsp;&emsp;&emsp;</h4>
+          <h4 class="title"><a href="https://api.whatsapp.com/send?phone=6281212100700">Hubungi Kami</a>&emsp;&emsp;&emsp;</h4>
         </div>
       </div>
 
       <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
           <div class="icon"><i class="bx bx-file"></i></div>
-          <h4 class="title"><a href="">Dapatkan Penawaran</a></h4>
+          <h4 class="title"><a href="#">Dapatkan Penawaran</a></h4>
         </div>
       </div>
 
       <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
           <div class="icon"><i class="bx bxs-book-content"></i></div>
-          <h4 class="title"><a href="">Download E-Brosur</a></h4>
+          <h4 class="title"><a target="_blank" href="{{$details['brosur']}}">Download E-Brosur</a></h4>
         </div>
       </div>
 
       <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
         <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
           <div class="icon"><i class="bx bxs-credit-card-alt"></i></div>
-          <h4 class="title"><a href="">Simulasi Kredit</a>&emsp;&emsp;</h4>
+          <h4 class="title"><a href="#">Simulasi Kredit</a>&emsp;&emsp;</h4>
         </div>
       </div>
 

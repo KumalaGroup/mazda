@@ -17,27 +17,12 @@ use Illuminate\Support\Facades\Route;
     return view('welcome');
 });*/
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'Beranda@index')->name('home'); 
 
-Route::get('/about', function () {
-    return view('about');
-});
+Route::get('/detail/{id}','Produk@detail')->name('unitDetail');
 
-Route::get('/produk', function () {
-    return view('mobil');
-});
+Route::get('/berita','Berita@index')->name('berita');
 
-Route::get('/detail/{id}', function () {
-    return view('detail');
-});
+Route::get('/berita/{slug}','Berita@detail')->name('beritaDetail');
 
-Route::get('/berita',function(){
-    return view('berita');
-});
-
-Route::get('/berita/{id}',function(){
-    return view('detailBerita');
-});
 
