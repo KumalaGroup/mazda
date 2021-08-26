@@ -29,10 +29,10 @@
 
         <nav class="nav-menu d-none d-lg-block">
             <ul>
-                <li class="active"><a href="#header">Home</a></li>
-                <li><a href="#about">Tentang Kami</a></li>
-                <li><a href="#portfolio">Produk</a></li>
-                <li><a href="#contact">Kontak</a></li>
+                <li class="active"><a href="{{url('/#header')}}">Home</a></li>
+                <li><a href="{{url('/#about')}}">Tentang Kami</a></li>
+                <li><a href="{{url('/#portfolio')}}">Produk</a></li>
+                <li><a href="{{url('/#contact')}}">Kontak</a></li>
                 <li><a href="{{url('berita')}}">Berita</a></li>
             </ul>
         </nav><!-- .nav-menu -->
