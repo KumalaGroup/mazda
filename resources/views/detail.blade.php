@@ -140,7 +140,7 @@
                 </div>
               
             </div>
-            <!-- <div id="thumbs" class="owl-carousel owl-theme">
+            {{-- <div id="thumbs" class="owl-carousel owl-theme">
 
               <div class="item">
                 <img src="{{asset('temp/assets/img/product-3.jpg')}}" alt="" width="100%">
@@ -152,13 +152,13 @@
                 <img src="{{asset('temp/assets/img/portfolio/portfolio-details-3.jpg')}}" alt="" width="100%">
               </div>
 
-            </div> -->
+            </div> --}}
           </div>
         </div>
 
         <div class="col-lg-6 col-md-12">
           <div class="produk-info">
-            <h3>Detail Product</h3>
+            <h3>Detail Produk</h3>
             <hr>
             <ul>
               <li><strong>{{$details['nama']}}</strong></li>
@@ -260,7 +260,7 @@
         animateOut: 'fadeOut',
         autoHeight: true,
         dots: false,
-        loop: true,
+        loop: false,
         responsiveRefreshRate: 200
       })
       .on("changed.owl.carousel", syncPosition);

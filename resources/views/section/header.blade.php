@@ -31,7 +31,7 @@
             <ul>
                 <li class="active"><a href="{{url('/#header')}}">Home</a></li>
                 <li><a href="{{url('/#about')}}">Tentang Kami</a></li>
-                <li><a href="{{url('/#portfolio')}}">Produk</a></li>
+                <li><a href="{{url('/#produk')}}">Produk</a></li>
                 <li><a href="{{url('/#contact')}}">Kontak</a></li>
                 <li><a href="{{url('berita')}}">Berita</a></li>
             </ul>

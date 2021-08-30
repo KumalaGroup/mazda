@@ -113,7 +113,7 @@
 </section><!-- End About Section -->
 
 <!-- ======= Portfolio Section ======= -->
-<section id="portfolio" class="portfolio">
+<section id="produk" class="portfoio">
     <div class="container">
 
         <div class="section-title">
@@ -141,17 +141,14 @@
                     $link       = route('unitDetail',['id'=>$id]);
                 @endphp
             
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                    <img src="{{$images}}" class="img-fluid" alt="">
+            <div class="col-lg-4 col-md-6 portfolio-item">
+                <img src="{{$images}}" class="img-fluid" alt="">
+                <a href="{{$link}}">
                     <div class="portfolio-info">
                         <h4>{{$nama_unit}}</h4>
-                        <p>{{$harga_unit}}</p>
-                        <div class="portfolio-links">
-                            <a href="{{$link}}" title="More Details"><i class="ri-links-fill"></i></a>
-                        </div>
+                        <p>{{$harga_unit}}</p>        
                     </div>
-                </div>
+                </a>
             </div>
             @endforeach
 
@@ -201,7 +198,7 @@
             </div>
         </div>
 
-        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+        <form role="form" class="php-email-form">
             <div class="form-row">
                 <div class="col-md-6 form-group">
                     <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
@@ -231,7 +228,7 @@
     </div>
 </section><!-- End Contact Section -->
 
-<section id="blog" class="padd-sectio">
+<section id="blog" class="padd-section" {{$hide}}>
 
     <div class="container aos-init aos-animate" data-aos="fade-up">
         <div class="container">
