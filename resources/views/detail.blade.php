@@ -268,6 +268,8 @@
         animateIn: 'fadeIn',
         animateOut: 'fadeOut',
         autoHeight: true,
+        mouseDrag :false,
+        touchDrag : false,
         dots: false,
         loop: false,
         responsiveRefreshRate: 200
