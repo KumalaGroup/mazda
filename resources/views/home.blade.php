@@ -79,7 +79,6 @@
 <section id="about" class="about">
     <div class="container">
         <div class="section-title">
-            <span>Tentang Kami</span>
             <h2>Tentang Kami</h2>
         </div>
         <div class="row content">
@@ -117,7 +116,6 @@
     <div class="container">
 
         <div class="section-title">
-            <span>Produk</span>
             <h2>Produk</h2>
         </div>
 
@@ -161,7 +159,6 @@
 <section id="contact" class="contact">
     <div class="container">
         <div class="section-title">
-            <span>Kontak Kami</span>
             <h2>Kontak Kami</h2>
         </div>
     </div>
@@ -233,7 +230,6 @@
     <div class="container aos-init aos-animate" data-aos="fade-up">
         <div class="container">
             <div class="section-title">
-                <span>Berita & Promo</span>
                 <h2>Berita & Promo</h2>
             </div>
         </div>

@@ -34,13 +34,13 @@
   }
 
   #thumbs .item {
-    background: #C9C9C9;
+    background: #ffffff;
     height: 70px;
     line-height: 70px;
     padding: 0px;
     margin: 2px;
     color: #FFF;
-    border-radius: 3px;
+    border-radius: 4px;
     text-align: center;
     cursor: pointer;
   }
@@ -130,29 +130,36 @@
 
     <div class="col-lg-12">
       <div class="row">
-
+        
         <div class="col-lg-6 col-md-12">
           <div class="outer">
             <div id="big" class="owl-carousel owl-theme">
 
+              @foreach ($details['warna'] as $item)
+
+                @php
+                    $img = $baseImg.'otomotif/warna/'.$item['gambar'];
+                @endphp
                 <div class="item">
-                  <img src="{{$details['img']}}" alt="" width="100%">
+                  <img src="{{$img}}" alt="" width="100%">
                 </div>
               
+              @endforeach
+
+                
             </div>
-            {{-- <div id="thumbs" class="owl-carousel owl-theme">
+            <div id="thumbs" class="owl-carousel owl-theme">
 
+              @foreach ($details['warna'] as $thumbs)
+                @php
+                    $thumbsImg = $baseImg.'otomotif/warna/'.$thumbs['gambar'];
+                @endphp
               <div class="item">
-                <img src="{{asset('temp/assets/img/product-3.jpg')}}" alt="" width="100%">
+                <img src="{{$thumbsImg}}" alt="" width="100%">
               </div>
-              <div class="item">
-                <img src="{{asset('temp/assets/img/portfolio/portfolio-details-2.jpg')}}" alt="" width="100%">
-              </div>
-              <div class="item">
-                <img src="{{asset('temp/assets/img/portfolio/portfolio-details-3.jpg')}}" alt="" width="100%">
-              </div>
-
-            </div> --}}
+              @endforeach
+              
+            </div>
           </div>
         </div>
 
@@ -231,6 +238,8 @@
     autoplayTimeout: 5000,
     autoplayHoverPause: true,
     autoHeight: true,
+    touchDrag : false,
+    mouseDrag : false,
     responsive: {
       0: {
         items: 1
