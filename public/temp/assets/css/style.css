@@ -14,16 +14,20 @@ body {
 }
 
 a {
-  color: #01b1d7;
+  color: #fff;
 }
 
 a:hover {
-  color: #0dd3fe;
+  color: #f2fdff;
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Nunito", sans-serif;
+@font-face {
+  font-family: mazda;
+  src: url(MazdaType-Medium.otf);
+}
+h1, h2, h3, h4, h5, h6, .price {
+  font-family: mazda;
 }
 
 /*--------------------------------------------------------------
@@ -45,13 +49,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 40px;
   height: 40px;
   border-radius: 4px;
-  background: #01b1d7;
+  background: #2a3336;
   color: #fff;
   transition: all 0.4s;
 }
 
 .back-to-top i:hover {
-  background: #03d1fe;
+  background: #2a3336;
   color: #fff;
 }
 
@@ -59,24 +63,24 @@ h1, h2, h3, h4, h5, h6 {
 # Top Bar
 --------------------------------------------------------------*/
 #topbar {
-  background: #fff;
+  background: #101010;
   padding: 10px 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #2a3336;
   font-size: 14px;
 }
 
 #topbar .contact-info a {
   line-height: 1;
-  color: #444444;
+  color: #f2fdff;
   transition: 0.3s;
 }
 
 #topbar .contact-info a:hover {
-  color: #01b1d7;
+  color: #e9e9e9;
 }
 
 #topbar .contact-info i {
-  color: #01b1d7;
+  color: #e9e9e9;
   padding: 4px;
 }
 
@@ -87,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #topbar .social-links a {
-  color: #62787d;
+  color: #f2fdff;
   padding: 4px 12px;
   display: inline-block;
   line-height: 1px;
@@ -96,7 +100,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #topbar .social-links a:hover {
-  color: #01b1d7;
+  color: #f2fdff;
 }
 
 #topbar .social-links a:first-child {
@@ -111,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
-  background: #fff;
+  background: #101010;
 }
 
 #header.header-scrolled {
@@ -127,18 +131,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .logo h1 a, #header .logo h1 a:hover {
-  color: #354144;
+  color: #f2fdff;
   text-decoration: none;
 }
 
 #header .logo h1 a span, #header .logo h1 a:hover span {
-  color: #01b1d7;
+  color: #f2fdff;
 }
 
 #header .logo img {
   padding: 0;
   margin: 0;
-  max-height: 40px;
+  max-height: 80px;
 }
 
 /*--------------------------------------------------------------
@@ -160,17 +164,17 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu a {
   display: block;
   position: relative;
-  color: #354144;
+  color: #f6f7f8;
   padding: 10px 15px;
   transition: 0.3s;
   font-size: 14px;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
+  font-family: mazda;
   font-weight: 500;
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-  color: #01b1d7;
+  color: #f2fdff;
   text-decoration: none;
 }
 
@@ -204,7 +208,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 14px;
   font-weight: 500;
   text-transform: none;
-  color: #354144;
+  color: #fff;
 }
 
 .nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
@@ -358,170 +362,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
-#hero {
-  width: 100%;
-  height: 110vh;
-  background-color: rgba(31, 38, 39, 0.8);
-  overflow: hidden;
-  position: relative;
-  padding: 0;
-}
-
-#hero .carousel-item {
-  width: 100%;
-  height: 110vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-}
-
-#hero .carousel-item::before {
-  content: '';
-  /* background-color: rgba(0, 0, 0, 0.7); */
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-}
-
-#hero .carousel-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-#hero .carousel-content {
-  text-align: center;
-}
-
-#hero h2 {
-  color: #fff;
-  margin-bottom: 30px;
-  font-size: 48px;
-  font-weight: 700;
-}
-
-#hero p {
-  width: 80%;
-  -webkit-animation-delay: 0.4s;
-  animation-delay: 0.4s;
-  margin: 0 auto 30px auto;
-  color: #fff;
-}
-
-#hero .carousel-inner .carousel-item {
-  transition-property: opacity;
-  background-position: center top;
-}
-
-#hero .carousel-inner .carousel-item,
-#hero .carousel-inner .active.carousel-item-left,
-#hero .carousel-inner .active.carousel-item-right {
-  opacity: 0;
-}
-
-#hero .carousel-inner .active,
-#hero .carousel-inner .carousel-item-next.carousel-item-left,
-#hero .carousel-inner .carousel-item-prev.carousel-item-right {
-  opacity: 1;
-  transition: 0.5s;
-}
-
-#hero .carousel-inner .carousel-item-next,
-#hero .carousel-inner .carousel-item-prev,
-#hero .carousel-inner .active.carousel-item-left,
-#hero .carousel-inner .active.carousel-item-right {
-  left: 0;
-  transform: translate3d(0, 0, 0);
-}
-
-#hero .carousel-control-prev, #hero .carousel-control-next {
-  width: 10%;
-}
-
-#hero .carousel-control-next-icon, #hero .carousel-control-prev-icon {
-  background: none;
-  font-size: 48px;
-  line-height: 1;
-  width: auto;
-  height: auto;
-}
-
-#hero .carousel-indicators li {
-  cursor: pointer;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  margin: 0 4px;
-  transition: ease-in;
-  opacity: .7;
-}
-
-#hero .carousel-indicators li.active {
-  opacity: 1;
-  background-color: #01b1d7;
-}
-
-#hero .btn-get-started {
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 14px 32px;
-  border-radius: 5px;
-  transition: 0.5s;
-  line-height: 1;
-  margin: 10px;
-  color: #fff;
-  background: #01b1d7;
-  -webkit-animation-delay: 0.8s;
-  animation-delay: 0.8s;
-}
-
-#hero .btn-get-started:hover {
-  background: #019cbe;
-}
-
-@media (max-width: 768px) {
-  #hero {
-    height: 90vh;
-  }
-  #hero .carousel-item {
-    height: 90vh;
-  }
-  #hero h2 {
-    font-size: 28px;
-  }
-}
-
-@media (min-width: 1024px) {
-  #hero p {
-    width: 60%;
-  }
-  #hero .carousel-control-prev, #hero .carousel-control-next {
-    width: 5%;
-  }
-}
-
-@media (max-height: 500px) {
-  #hero {
-    height: 150vh;
-  }
-  #hero .carousel-item {
-    height: 150vh;
-  }
-}
 
 /*--------------------------------------------------------------
 # Sections General
@@ -817,36 +657,6 @@ section {
 /*--------------------------------------------------------------
 # Portfoio
 --------------------------------------------------------------*/
-.portfoio #portfolio-flters {
-  padding: 0;
-  margin: 0 auto 25px auto;
-  list-style: none;
-  text-align: center;
-  border-radius: 50px;
-}
-
-.portfoio #portfolio-flters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 8px 18px 10px 18px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
-  color: #444444;
-  margin: 0 3px 10px 3px;
-  transition: all ease-in-out 0.3s;
-  border-radius: 50px;
-}
-
-.portfoio #portfolio-flters li:hover, .portfoio #portfolio-flters li.filter-active {
-  color: #fff;
-  background: #0880e8;
-}
-
-.portfoio #portfolio-flters li:last-child {
-  margin-right: 0;
-}
-
 .portfoio .portfolio-item {
   margin-bottom: 30px;
   overflow: hidden;
@@ -891,22 +701,14 @@ section {
   transition: ease-in-out 0.3s;
 }
 
-.portfoio .portfolio-item .portfolio-info .preview-link:hover, .portfoio .portfolio-item .portfolio-info .details-link:hover {
-  color: #8ec8fb;
-}
-
 .portfoio .portfolio-item .portfolio-info .details-link {
   right: 15px;
 }
 
 .portfoio .portfolio-item:hover img {
-  top: -30px;
+  transform: scale(1.2);
 }
 
-.portfoio .portfolio-item:hover .portfolio-info {
-  opacity: 1;
-  bottom: 0;
-}
 
 /*--------------------------------------------------------------
 # Team
@@ -1121,7 +923,7 @@ section {
 
 .contact .info i {
   font-size: 24px;
-  color: #01b1d7;
+  color: #1f2627;
   float: left;
   width: 48px;
   height: 48px;
@@ -1287,8 +1089,12 @@ section {
 .breadcrumbs ol li + li::before {
   display: inline-block;
   padding-right: 10px;
-  color: #4b5c61;
+  color: #101010;
   content: "/";
+}
+
+.breadcrumbs a {
+  color: #101010;
 }
 
 @media (max-width: 768px) {
@@ -1464,7 +1270,7 @@ section {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #40dcfe;
+  color: #e2faff;
   font-size: 18px;
   line-height: 1;
 }
@@ -1513,14 +1319,14 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #01b1d7;
+  background: #f2fdff;
   color: #fff;
   transition: 0.3s;
   border-radius: 0 5px 5px 0;
 }
 
 #footer .footer-top .footer-newsletter form input[type="submit"]:hover {
-  background: #0187a4;
+  background: #101010;
 }
 
 #footer .copyright {

@@ -2,50 +2,44 @@
 
 @section('content')
 
+@section('style')
+<style>
+    #customCarousel .owl-dots {
+        position: absolute;
+        bottom: 0;
+        padding-bottom: 20px;
+        width: 100%;
+    }
+
+    #customCard {
+        box-shadow: none;
+        border: .5px solid #dee2e6;
+        border-radius: .25rem;
+    }
+
+    #customCard:hover {
+        border: .5px solid #e1444d;
+    }
+</style>
+@endsection
 <!-- ======= Hero Section ======= -->
-<section id="hero">
-    <div class="hero-container">
-        <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-
-            <!-- <ol class="carousel-indicators" id="hero-carousel-indicators"></ol> -->
-
-            <div class="carousel-inner" role="listbox">
-
-                <!-- <div class="carousel-item active" style="background-image: url(temp/assets/img/slide/slide-1.png);"></div>
-                <div class="carousel-item " style="background-image: url(temp/assets/img/slide/slide-1.png);"></div>
-                 -->
-                @foreach($data['sliders'] as $index => $slide)
-                    
-                @php
-                    if($index == 0)
-                        {$class = 'active';}
-                    else
-                        {$class = '';}
-
-                    $img_slides = $baseImg.'slider/'.$slide['gambar'];
-                    $aksi       = $slide['aksi'];
-
-                @endphp
-                    <div class="carousel-item {{$class}}" style="background-image: url({{$img_slides}});">
-                    </div>               
-                @endforeach
-
-            </div>
-
-            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon ri-arrow-left-line" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
+<section id="customCarousel" style="padding: 0px 0 20px 0;">
+    <div class="owl-carousel owl-theme dots-morphing">
+        @foreach($data['sliders'] as $index => $slide)
+        @php
+        $gambar = $baseImg.'slider/'.$slide['gambar'];
+        $uri = $slide['aksi'];
+        @endphp
+        <div class="item">
+            <a href="{{ $uri }}" target="_blank">
+                <img src="{{ $gambar }}" alt="" width="100%" class="img-fluid">
             </a>
-
-            <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon ri-arrow-right-line" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-
         </div>
+        @endforeach
     </div>
 </section>
-<!-- End Hero -->
+
+
 
 
 <!-- ======= Car Section ======= -->
@@ -59,13 +53,14 @@
                     $image = $baseImg.'otomotif/'.$product['gambar'];
                     $nama  = Str::title($product['to_models'][0]['nama_model']);
                     $harga = 'Rp. '.number_format($product['harga'],'0',',','.');
+                    $id    = Crypt::encryptString($product['id']);
+                    $link  = route('unitDetail',['id'=>$id]);
                 @endphp
             
             <div class="testimonial-item">
-                <img width="50" height="200" src="{{$image}}" class="img-fluid">
+                <a href="{{$link}}"><img width="50" height="200" src="{{$image}}" class="img-fluid"></a>
                 <h3>{{$nama}}</h3>
                 <h4>{{$harga}}</h4>
-
             </div>
             @endforeach
 
@@ -119,14 +114,6 @@
             <h2>Produk</h2>
         </div>
 
-        <!-- <div class="row">
-            <div class="col-lg-12">
-                <ul id="portfolio-flters">
-                    <li data-filter="*" class="filter-active">All</li>
-                </ul>
-            </div>
-        </div> -->
-
         <div class="row portfolio-container">
 
             @foreach($data['inventories'] as $unit)
@@ -140,13 +127,14 @@
                 @endphp
             
             <div class="col-lg-4 col-md-6 portfolio-item">
-                <img src="{{$images}}" class="img-fluid" alt="">
                 <a href="{{$link}}">
-                    <div class="portfolio-info">
-                        <h4>{{$nama_unit}}</h4>
-                        <p>{{$harga_unit}}</p>        
-                    </div>
+                    <img src="{{$images}}" class="img-fluid" alt="">
+                    
                 </a>
+                <div align="center">
+                    <h4>{{$nama_unit}}</h4>
+                    <p class="price">{{$harga_unit}}</p>        
+                </div>
             </div>
             @endforeach
 
@@ -167,7 +155,7 @@
         <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7947.235387125186!2d119.435185!3d-5.1650442!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbee29418936ec7%3A0x3abbb135e91ad719!2sMazda%20Kumala%20Makassar!5e0!3m2!1sid!2sid!4v1628572786267!5m2!1sid!2sid" frameborder="0" allowfullscreen></iframe>
     </div>
 
-    <div class="container">
+    {{-- <div class="container">
 
         <div class="info-wrap mt-5">
             <div class="row">
@@ -222,7 +210,7 @@
             <div class="text-center"><button type="submit">Send Message</button></div>
         </form>
 
-    </div>
+    </div> --}}
 </section><!-- End Contact Section -->
 
 <section id="blog" class="padd-section" {{$hide}}>
@@ -311,4 +299,37 @@
 </section> --}}
 
 
+@endsection
+@section('script')
+<script>
+    $('#customCarousel .owl-carousel').owlCarousel({
+        loop: true,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        autoHeight: true,
+        items: 1
+    })
+
+    $('#garasi .owl-carousel').owlCarousel({
+        margin: 30,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        autoHeight: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 3
+            }
+        }
+    })
+</script>
 @endsection

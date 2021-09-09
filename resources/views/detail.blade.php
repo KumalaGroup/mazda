@@ -135,17 +135,23 @@
           <div class="outer">
             <div id="big" class="owl-carousel owl-theme">
 
-              @foreach ($details['warna'] as $item)
-
-                @php
-                    $img = $baseImg.'otomotif/warna/'.$item['gambar'];
-                @endphp
+              @if (empty($details['warna']))
                 <div class="item">
-                  <img src="{{$img}}" alt="" width="100%">
+                  <img src="{{$details['img']}}" alt="" width="100%">
                 </div>
-              
-              @endforeach
+              @else
+                @foreach ($details['warna'] as $item)
 
+                  @php
+                      $img = $baseImg.'otomotif/warna/'.$item['gambar'] ?? $details['img'];
+                      
+                  @endphp
+                  <div class="item">
+                    <img src="{{$img}}" alt="" width="100%">
+                  </div>
+                
+                @endforeach
+              @endif
                 
             </div>
             <div id="thumbs" class="owl-carousel owl-theme">

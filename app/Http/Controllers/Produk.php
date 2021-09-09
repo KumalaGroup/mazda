@@ -24,8 +24,9 @@ class Produk extends Controller
         $details['harga']  = 'Rp.'.number_format($data['product']['harga'],'0',',','.');
         $details['desc']   = $data['product']['deskripsi'];
         $details['brosur'] = $baseImg.'otomotif/brosur/'.$data['product']['brosur'];
-        $details['warna']   = $data['warna'];
-
+        $details['img']    = $baseImg.'otomotif/'.$data['product']['gambar'];
+        $details['warna']  = $data['warna'];
+        // dd($details);
         return view('detail',compact('data','index','baseImg','details'));
     }
 }
