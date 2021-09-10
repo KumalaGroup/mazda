@@ -162,7 +162,7 @@
   position: relative;
   overflow: hidden;
   background: #fff;
-  box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+  box-shadow: 0 0 29px 0 rgba(10, 10, 10, 0.12);
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
   z-index: 1;
@@ -182,7 +182,7 @@
 }
 
 .services .icon-box:hover::before {
-  background: #3498db;
+  background: #101010;
   right: 0;
   top: 0;
   width: 100%;
@@ -198,7 +198,7 @@
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  background: #3498db;
+  background: #101010;
   transition: all 0.3s ease-in-out;
 }
 
@@ -215,7 +215,7 @@
 }
 
 .services .title a {
-  color: #111;
+  color: #101010;
 }
 
 .services .description {
@@ -233,7 +233,7 @@
 }
 
 .services .icon-box:hover .icon i {
-  color: #3498db;
+  color: #101010;
 }
 
 
