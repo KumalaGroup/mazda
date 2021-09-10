@@ -6,8 +6,14 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <title>Mazda</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+    <meta content="Dealer Mazda Kumala dibawah naungan PT.Kumala Celebes Motor merupakan autorized dealer 3 S
+    (sales , Service dan Sparepart ) .
+    Pada awalnya berdiri pada September 2007 di Jl. Bulusaraung Makassar dengan 1 S hingga resmi
+    menjadi Autorize Dealer 3 S pada Januari 2010 yang beralamat di JL.A.P Pettarani Kav E1 No.5
+    Kota makassar hingga sekarang. Dealer Resmi Mazda melayani penjualan Mobil Mazda Semua Tipe,
+    pelayanan suku cadang dan bengkel Resmi Mazda di Makassar, Yang melayani Wilayah Indonesia
+    Timur." name="description">
+    <meta content="mazdakumala,kumalagroup,mazda,mobilmazda" name="keywords">
 
     <!-- Favicons -->
     <link href="{{asset('temp/assets/img/logo-mzda.png')}}" rel="icon">
