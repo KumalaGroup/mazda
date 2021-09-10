@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Mazda</title>
+    <title>Mazda Kumala</title>
     <meta content="Dealer Mazda Kumala dibawah naungan PT.Kumala Celebes Motor merupakan autorized dealer 3 S
     (sales , Service dan Sparepart ) .
     Pada awalnya berdiri pada September 2007 di Jl. Bulusaraung Makassar dengan 1 S hingga resmi
