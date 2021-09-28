@@ -31,7 +31,7 @@ class Controller extends BaseController
     {
         $auth = ['email' => 'mazda@x.com', 'password' => 'mazdakumala??'];
 
-        $response = Http::withBody(json_encode($auth), 'application/json')->post(self::$baseUri.'auth');
+        $response = Http::withoutVerifying()->withBody(json_encode($auth), 'application/json')->post(self::$baseUri.'auth');
         $result  = $response->json();
 
         if($result['status'] === true)
@@ -49,7 +49,7 @@ class Controller extends BaseController
             return self::auth();
         }
 
-        $response = Http::withToken($token)->get(self::$baseUri.'auth/validate');
+        $response = Http::withoutVerifying()->withToken($token)->get(self::$baseUri.'auth/validate');
         $result = $response->json();
 
         if($result['status'] === false)

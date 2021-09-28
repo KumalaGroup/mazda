@@ -12,7 +12,7 @@ class Berita extends Controller
     public function index()
     {
         $uri      = parent::$baseUri.'berita';
-        $response = Http::withToken(parent::$token)->get($uri);
+        $response = Http::withoutVerifying()->withToken(parent::$token)->get($uri);
 
         $data     = $response->json()['data'];
 
@@ -25,7 +25,7 @@ class Berita extends Controller
     public function detail($slug)
     {
         $uri      = parent::$baseUri.'berita/'.$slug;
-        $response = Http::withToken(parent::$token)->get($uri);
+        $response = Http::withoutVerifying()->withToken(parent::$token)->get($uri);
 
         $data     = $response->json()['data'];
         $baseImg  = parent::$baseImg;

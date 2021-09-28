@@ -11,7 +11,7 @@ class Produk extends Controller
     public function detail($id)
     {
         $uri      = parent::$baseUri . 'produk/' . Crypt::decryptString($id);
-        $response = Http::withToken(parent::$token)->get($uri);
+        $response = Http::withoutVerifying()->withToken(parent::$token)->get($uri);
 
         $data = $response->json()['data'];
 

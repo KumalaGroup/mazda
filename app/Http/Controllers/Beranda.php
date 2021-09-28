@@ -10,7 +10,7 @@ class Beranda extends Controller
     public function index(Request $request)
     {
         $uri = parent::$baseUri.'home'; 
-        $response = Http::withToken(parent::$token)->get($uri);
+        $response = Http::withoutVerifying()->withToken(parent::$token)->get($uri);
         $data = $response->json()['data'];
         
         $index = 'home';
