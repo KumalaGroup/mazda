@@ -179,9 +179,11 @@
             </ul>
             <div class="portfolio-description">
               <p>
-                {{$details['desc']}}
+                {!! $details['desc'] !!}
               </p>
-
+              <p>
+                {!! $details['detailTambahan'] !!}
+              </p>
             </div>
           </div>
 
